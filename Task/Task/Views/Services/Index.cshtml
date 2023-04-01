@@ -1,0 +1,26 @@
+﻿@model List<Service>
+
+<section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Services</h2>
+            <h3>Check our <span>Services</span></h3>
+            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
+
+        <div class="row">
+            @foreach (var srv in Model)
+            {
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class="@srv.Icon"></i></div>
+                        <h4><a href="">@srv.Title</a></h4>
+                        <p>@srv.Desc</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</section><!-- End Services Section -->
